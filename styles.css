@@ -1,0 +1,444 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* reset default css */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* reset css end */
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+p,
+.profile-wrapper>div>div:first-child,
+.trending-container>div>div>div {
+    font-family: Helvetica, sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.body-grid-container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 5fr 0.3fr;
+    background-color: ivory;
+}
+
+.header {
+    grid-column: 2 / -1;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    background-color: #fff;
+    box-shadow: 1px 1px 5px gray; 
+}
+
+.header-l {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.header-l>div:first-child {
+    display: grid;
+    place-items: center;
+}
+
+.header-l>div:first-child>div {
+    width: 90%;
+    height: 40%;
+    display: grid;
+    margin-bottom: 15px;
+    grid-template-columns: 1fr 95%;
+}
+
+.search {
+    border-radius: 15px;
+    padding-left: 10px;
+    background-color: rgb(235, 235, 235);
+    transition: font-size 0.5s;
+}
+
+.search:focus {
+    outline: none;
+    font-size: large;
+}
+
+.profile {
+    display: grid;
+    place-items: center;
+}
+
+.profile-wrapper {
+    width: 90%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    align-items: center;
+}
+
+.profile-wrapper>img {
+    max-height: 60px;
+    max-width: 60px;
+    border-radius: 30px;
+}
+
+.profile-wrapper>div>div {
+    margin-left: 20px;
+}
+
+.profile-wrapper>div>div:first-child {
+    margin-bottom: 10px;
+    font-size: 0.8rem;
+}
+
+.profile-wrapper>div>div:last-child {
+    font-size: 1.4rem;
+}
+
+.header-r {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.notification-area {
+    grid-column: 2 / 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr 3fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.notification-area>button {
+    background-color: #fff;
+    border: none;
+}
+
+.notification-area>button>img{
+    width: 30px;
+    height: 30px;
+}
+
+.notification-area>button>img:hover {
+    cursor: pointer;
+}
+
+.notification-area>button>img:active {
+    width: 20px;
+    height: 20px;
+}
+
+.noti-profile {
+    max-width: 40px;
+    max-height: 40px;
+    border-radius: 30px;
+    justify-self: center;
+}
+
+.noti-profile+div {
+    justify-self: start;
+    font-size: 1.2rem;
+}
+
+.action-btns {
+    grid-area: 2 / 1 / -1 / -1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    justify-items: center;
+}
+
+.action-btns>button {
+    width: 80px;
+    height: 40px;
+    background-color: rgb(0, 110, 255);
+    color: antiquewhite;
+    border-radius: 20px;
+    border: 1px solid gray;
+    font-weight: bold;
+}
+
+.action-btns>button:hover {
+    cursor: pointer;
+}
+
+.action-btns>button:active {
+    width: 70px;
+    height: 35px;
+    font-size: 0.6rem;
+}
+
+.action-btns>button:first-child {
+    justify-self: end;
+}
+
+.action-btns>button:last-child {
+    justify-self: start;
+}
+
+.sidebar {
+    grid-row: 1 / -2;
+    display: grid;
+    grid-template-rows: 100px 400px 300px auto;
+    background: linear-gradient(to bottom, lightblue, rgb(100, 230, 100));
+    border-right: 2px solid lightblue;
+}
+
+.sidebar a {
+    color: black;
+    text-decoration: none;
+}
+
+.sidebar>div:not(.sidebar-heading)>div>a {
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-heading>div>a {
+    display: flex;
+    align-items: center;
+    font-size: 1.6rem;
+}
+
+.sidebar-heading>div>a>img {
+    width: 50px;
+    height: 50px;
+}
+
+.sidebar img {
+    width: 30px;
+    height: 30px;
+}
+
+.sidebar>div>div span {
+    margin-left: 10px;
+}
+
+.sidebar>div>div {
+    padding-left: 15px;
+}
+
+.sidebar-heading {
+    display: grid;
+    align-items: center;
+}
+
+.nav1>div,
+.nav2>div {
+    padding: 15px 0;
+}
+
+.nav1>div:hover,
+.nav2>div:hover {
+    background-color: grey;
+}
+
+.main {
+    grid-area: 2 / 2 / span 1 / -1;
+    display: grid;
+    grid-template-columns: 4fr 1.5fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 15px;
+    column-gap: 15px;
+    row-gap: 10px;
+}
+
+.cards-section {
+    grid-row: 1 / -1;
+    display: grid;
+    grid-template-rows: 30px 1fr;
+}
+
+.cards-section>div:first-child {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.cards {
+    padding: 10px;
+    display: grid;
+    grid-template-rows: 1fr 4fr 1fr;
+    background-color:#8080801c;
+    border-left: 8px solid orange;
+    border-radius: 10px 5px 5px 10px;
+    box-shadow: 2px 2px 1px;
+}
+
+.cards>h2 {
+    font-weight: bold;
+}
+
+.cards>p {
+    font-size: 0.9em;
+    line-height: 1.5em;
+    color: rgb(49, 57, 65);
+}
+
+.cards-asset {
+    display: flex;
+    justify-content: end;
+    gap: 8px;
+}
+
+.cards-asset>button {
+    background-color: inherit;
+    height: 40px;
+    width: 40px;
+}
+
+.cards-asset>button:hover {
+    background-color: #c0c0c0;
+}
+
+.announce-section {
+    grid-column: 2 / -1;
+    display: grid;
+    grid-template-rows: 15px 1fr;
+    gap: 15px;
+}    
+
+.trending-section {
+    grid-row: 2 / -1;
+}
+
+.announce-section>div:first-child {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.announce-container {
+    padding: 15px;
+    padding-bottom: 0;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    background-color: #8080801c;
+    border-radius: 10px 5px 5px 10px;
+    border-left: 5px solid rgb(106, 106, 250);
+    box-shadow: 2px 2px 1px;
+}
+
+.announce-container>div>h3 {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.announce-container p {
+    font-size: 0.7rem;
+    line-height: 1.1;
+    color: rgb(49, 57, 65);
+}
+
+.trending-section {
+    display: grid;
+    grid-template-rows: 30px 1fr;
+}
+
+.trending-section>div:first-child {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.trending-container {
+    background-color: #8080801c;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    align-items: center;
+    border-radius: 10px 5px 5px 10px;
+    border-left: 5px solid rgb(233, 115, 115);
+    box-shadow: 2px 2px 1px;
+}
+
+.trending-container img {
+    max-width: 40px;
+    max-height: 40px;
+    border-radius: 30px;
+}
+
+.trending-container>div {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    background-color: peachpuff;
+    padding: 10px;
+    border-radius: 25px;
+    border: 1px ridge goldenrod;
+}
+
+.trending-container>div>div {
+    display: grid;
+}
+
+.trending-container>div>div>div {
+    align-self: end;
+    color: rgb(49, 57, 65);
+    font-size: 0.9rem;
+}
+
+.footer {
+    grid-area: 3 / 1 / -1 / -1;
+    box-shadow: -1px -1px 1px gray;
+    display: grid;
+    align-items: end;
+    justify-items: center;
+    margin-bottom: 7px;
+}
+
+.footer>div {
+    font-size: small;
+}
